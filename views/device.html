@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Main</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <form action = '/add', method = 'get'>
+       txType  : <select name="txType">
+        <option value="1">operation</option>
+        <option value="2">access</option>
+        <option value="3">monitor</option>
+        <option value="4">remove</option>
+        </select>
+       trgORop : <input type = 'text' name = 'trgORop'>
+       content : <input type = 'text' name = 'content'>
+       <input type = 'submit' name = 'submit'>
+    </form>
+
+    <br>
+    <% for(var i=0; i < oplist.length; i++) { %>
+      <li>
+              <a href = '/sendTx?txType=<%=oplist[i].txType%>&amp;trgORop=<%=oplist[i].trgORop%>&amp;content=<%=oplist[i].content%>'>
+              registered transactiontx <%= i %> -- Type : <%= oplist[i].txType %> trgORop : <%= oplist[i].trgORop %> content :<%=oplist[i].content %>
+              </a>
+      </li>
+  <% } %>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+<html>
+  <head>
+    <title>Blockchain admin site</title>
+    <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+
+    $(document).ready(function() {
+        var lastblockId = $("#lastblockId").val();
+        openBlock(lastblockId)
+
+
+      });
+
+
+
+      function openBlock(blockId) {
+        var i;
+        var x = document.getElementsByClassName("blockId");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          document.getElementById(blockId).style.display = "block";
+        }
+
+    </script>
+  </head>
+  <body>
+    <input type ='hidden' id='lastblockId' name='lastblockId' value='<%=blockchain[blockchain.length-1].header.Id%>'/>
+    <header>
+        <h2 align = "center" >Blockchain admin</h2>
+    </header>
+
+    <div id = 'navigator' class = 'w3-bar w3-green'>
+      <a href="/controller" class="w3-bar-item w3-button w3-right">controller</a>
+      <a href="/connected" class="w3-bar-item w3-button w3-right">connected</a>
+      <a href="/main" class="w3-bar-item w3-button w3-right">main</a>
+    </div>
+
+
+   <div class="w3-bar w3-black">
+     <% for(var i= 0; i<blockchain.length; i++) {%>
+        <button class="w3-bar-item w3-button" onclick="openBlock('<%=blockchain[i].header.Id%>')"><%=blockchain[i].header.Id%></button>
+     <% } %>
+   </div>
+
+   <div id ='content' align="center">
+
+   <% for(var i= 0; i <blockchain.length; i++) {%>
+     <div id="<%= blockchain[i].header.Id%>" class="blockId" style="display:none">
+       <div style ="margin:10px"> block Id : <%= blockchain[i].header.Id %> </div>
+         <div class="w3-card-4 w3-margin-left w3-cell" style="width:35%;display:inline-block;">
+           <div class="w3-container w3-red" >
+               <h3>Outer Policy</h3>
+           </div>
+         <table class ="w3-striped">
+             <tr>
+               <th>number</th>
+               <th>devld</th>
+               <th>txType</th>
+               <th>trgORop</th>
+               <th>action</th>
+             </tr>
+             <% for( var outi = 0 ; outi <blockchain[i].outerPolicy.length; outi++) { %>
+                <tr>
+                  <td><%= blockchain[i].outerPolicy[outi].number%></id>
+                  <td><%= blockchain[i].outerPolicy[outi].devId%></id>
+                  <td><%= blockchain[i].outerPolicy[outi].txType%></id>
+                  <td><%= blockchain[i].outerPolicy[outi].trgORop%></id>
+                  <td><%= blockchain[i].outerPolicy[outi].action%></id>
+                </tr>
+            <% } %>
+         </table>
+        </div>
+
+
+        <div class="w3-card-4 w3-cell" style="width:35%;display:inline-block;margin-left: 30px" >
+           <div class="w3-container w3-green" >
+               <h3>Inner Policy</h3>
+           </div>
+
+           <table class ="w3-striped">
+               <tr>
+                 <th>number</th>
+                 <th>policyType</th>
+                 <th>action</th>
+               </tr>
+
+               <% for( var inni = 0 ; inni <blockchain[i].innerPolicy.length; inni++) { %>
+                  <tr>
+                    <td><%= blockchain[i].innerPolicy[inni].number%></id>
+                    <td><%= blockchain[i].innerPolicy[inni].policyType%></id>
+                    <td><%= blockchain[i].innerPolicy[inni].action%></id>
+                  </tr>
+              <% } %>
+
+           </table>
+         </div>
+
+         <div class = "w3-card-4 " style="margin-top: 40px; width :80% " >
+             <div class="w3-container w3-indigo" >
+                 <h3>Header</h3>
+             </div>
+             <h4>
+             <div style = "padding-left: 10px" align="left">
+                 ID : <%= blockchain[i].header.Id %><br>
+                 MinerID : <%= blockchain[i].header.MinerId %><br>
+                 BlockHash : <%= blockchain[i].header.BlockHV%><br>
+                 NumOfTransaction : <%= blockchain[i].header.NumOfTransaction %><br>
+                 parentHash : <%= blockchain[i].header.prvBlockHV %><br>
+                 txTrieRoot : <%= blockchain[i].header.txTrie %><br>
+                 createTime : <%= blockchain[i].header.time %><br>
+             </div>
+           </h4>
+         </div>
+
+         <div class = "w3-card-4"style="margin-top: 30px; width : 80%">
+             <div class="w3-container w3-purple" >
+                 <h3>Transactions</h3>
+             </div>
+             <h4>
+             <div style = "padding-left: 10px">
+                   <% for(var txi= 0; txi <blockchain[i].Transactions.length; txi++) {%>
+                       <%= txi %> : <input type ='text' class ='encryptTx' value='<%= blockchain[i].Transactions[txi] %>' readonly="true" size ='80'>
+                   <% } %>
+             </div>
+           </h4>
+         </div>
+
+
+     </div>
+   <% } %>
+
+ </div>
+
+
+   <footer class = "w3-padding w3-display-bottom w3-center" style = "background: #aaa;color:white;">
+       <br> Copyright &copy; Soongsil Univ.</footer>
+
+  </body>
+</html>

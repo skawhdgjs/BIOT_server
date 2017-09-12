@@ -1,0 +1,8 @@
+{
+  "p2pPort" : 5001,
+  "p2pServerUrl" : "http://localhost:5001",
+  "p2pRole" : "server",
+  "webPort" : 3091,
+  "devPort" : 4002,
+  "minerId" : "server1"
+}

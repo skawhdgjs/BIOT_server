@@ -1,0 +1,9 @@
+{
+   "id" : 1,
+   "MinerId" : "1",
+   "NoT" : 0,
+   "prvBlockHV" : "0",
+   "Transactions" : [],
+   "innerPolicy" : [],
+   "outerPolicy" : []
+}

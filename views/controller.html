@@ -1,0 +1,106 @@
+<html>
+  <head>
+    <title>Blockchain admin site</title>
+    <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+
+    </script>
+  </head>
+  <body>
+    <header>
+        <h2 align = "center" >Blockchain admin</h2>
+    </header>
+
+    <div id = 'navigator' class = 'w3-bar w3-green'>
+      <a href="/controller" class="w3-bar-item w3-button w3-right">controller</a>
+      <a href="/connected" class="w3-bar-item w3-button w3-right">connected</a>
+      <a href="/main" class="w3-bar-item w3-button w3-right">main</a>
+    </div>
+
+    <div id ='addOuterPolicy' class = 'w3-card-4'>
+      <div class="w3-container w3-indigo" >
+          <h3>add OuterPolicy</h3>
+      </div>
+
+    <form action = "/outAddPolicy" mehtod = 'get'>
+        devId : <input type ='text' name = 'devId'/><br>
+        txType : <select name="txType">
+         <option value="1">operation</option>
+         <option value="2">access</option>
+         <option value="3">monitor</option>
+         <option value="4">remove</option>
+       </select><br>
+        trgORop : <input type = 'trgORop' name = 'trgORop'/><br>
+        action : <input type = 'action' name ='action'/>
+        <input type = 'submit' value = 'addPolicy' />
+    </form>
+    </div>
+
+    <div id ='deleteOuterPolicy' class = 'w3-card-4'>
+      <div class="w3-container w3-indigo" >
+          <h3>delete OuterPolicy</h3>
+      </div>
+
+    <form action = "/outDeletePolicy" mehtod = 'get'>
+        index : <input type ='text' name = 'index'/><br>
+        <input type = 'submit' value = 'deletPolicy' />
+    </form>
+    </div>
+
+    <div id ='addInnerPolicy' class = 'w3-card-4'>
+      <div class="w3-container w3-indigo" >
+          <h3>add InnerPolicy</h3>
+      </div>
+    <form action = "/innAddPolicy" mehtod = 'get'>
+        policyType : <input type ='text' name = 'policyType'/><br>
+        action : <input type = 'action' name ='action'/>
+        <input type = 'submit' value = 'addInnerPolicy' />
+    </form>
+    </div>
+
+    <div id ='deleteInnerPolicy' class = 'w3-card-4'>
+      <div class="w3-container w3-indigo" >
+          <h3>delete InnerPolicy</h3>
+      </div>
+
+    <form action = "/innDeletePolicy" mehtod = 'get'>
+        index : <input type ='text' name = 'index'/><br>
+        <input type = 'submit' value = 'deletInnerPolicy' />
+    </form>
+    </div>
+
+
+    <div id ='updateInnerPolicy' class = 'w3-card-4'>
+      <div class="w3-container w3-indigo" >
+          <h3>updateInnerPolicy</h3>
+      </div>
+    <form action = "/updateInnPolicy" mehtod = 'get'>
+        policyType : <select name="policyType">
+         <option value="1">add_node</option>
+         <option value="2">delete_node</option>
+         <option value="3">update_outer_policy</option>
+       </select><br>
+         action : <select name="action">
+         <option value="1">allow</option>
+         <option value="2">deny</option>
+       </select>
+       <input type = 'submit' value = 'updateInnPolicy' />
+    </form>
+    </div>
+
+    <div id = 'verify' class = 'w3-card-4'>
+      <div class="w3-container w3-indigo" >
+          <h3>verify</h3>
+      </div>
+      <form action ="/verify" method="get">
+        <input type ='submit' value = 'verify'/>
+      </from>
+    </div>
+
+
+   <footer class = "w3-padding w3-display-bottom w3-center" style = "background: #aaa;color:white;">
+       <br> Copyright &copy; Soongsil Univ.</footer>
+
+  </body>
+</html>
