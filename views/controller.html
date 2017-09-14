@@ -1,7 +1,12 @@
 <html>
   <head>
     <title>Blockchain admin site</title>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
     <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">
+
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>
 
@@ -12,90 +17,143 @@
         <h2 align = "center" >Blockchain admin</h2>
     </header>
 
-    <div id = 'navigator' class = 'w3-bar w3-green'>
+    <div id = 'navigator' class = "w3-bar w3-pink w3-hover-shadow">
       <a href="/controller" class="w3-bar-item w3-button w3-right">controller</a>
       <a href="/connected" class="w3-bar-item w3-button w3-right">connected</a>
       <a href="/main" class="w3-bar-item w3-button w3-right">main</a>
     </div>
 
-    <div id ='addOuterPolicy' class = 'w3-card-4'>
-      <div class="w3-container w3-indigo" >
+
+
+
+
+
+
+    <div id = 'outer'>
+
+    <div id ='addOuterPolicy' class = 'w3-card-4' style="margin-top:1%;display:inline-block;width:46%;margin-left:3%;">
+      <div class="w3-container w3-purple w3-hover-shadow" >
           <h3>add OuterPolicy</h3>
       </div>
 
     <form action = "/outAddPolicy" mehtod = 'get'>
-        devId : <input type ='text' name = 'devId'/><br>
-        txType : <select name="txType">
+        <div style="margin-left:3%;margin-top:1%;margin-bottom: 1%;">
+            <p>devId : <input type ='text' name = 'devId' class="w3-round"/></p>
+            <p>txType : <select name="txType">
          <option value="1">operation</option>
          <option value="2">access</option>
          <option value="3">monitor</option>
          <option value="4">remove</option>
-       </select><br>
-        trgORop : <input type = 'trgORop' name = 'trgORop'/><br>
-        action : <input type = 'action' name ='action'/>
-        <input type = 'submit' value = 'addPolicy' />
+            </select></p>
+            <p>trgORop : <input type = 'trgORop' name = 'trgORop' class="w3-round"/></p>
+            <p>action : <input type = 'action' name ='action' class="w3-round"/></p>
+        <input type = 'submit' value = 'addPolicy' class="w3-round w3-hover-shadow"/>
+            <br><br>
+        </div>
     </form>
     </div>
 
-    <div id ='deleteOuterPolicy' class = 'w3-card-4'>
-      <div class="w3-container w3-indigo" >
+    <div id ='deleteOuterPolicy' class = 'w3-card-4' style="margin-top:1%;display:inline-block;width:46%;margin-left:2%;">
+      <div class="w3-container w3-purple w3-hover-shadow" >
           <h3>delete OuterPolicy</h3>
       </div>
 
     <form action = "/outDeletePolicy" mehtod = 'get'>
-        index : <input type ='text' name = 'index'/><br>
-        <input type = 'submit' value = 'deletPolicy' />
+        <div style="margin-left:3%;margin-top:1%;margin-bottom: 1%;">
+            <br><br>
+            <p>index : <input type ='text' name = 'index' class="w3-round"/></p>
+            <br><br>
+        <input type = 'submit' value = 'deletPolicy' class="w3-round w3-hover-shadow" />
+        <br><br><br>
+        </div>
     </form>
     </div>
 
-    <div id ='addInnerPolicy' class = 'w3-card-4'>
-      <div class="w3-container w3-indigo" >
+    </div>
+
+
+
+
+
+
+
+
+    <div id="inner">
+
+    <div id ='addInnerPolicy' class = 'w3-card-4' style="margin-top:1%;display:inline-block;width:30%;margin-left:3%;">
+      <div class="w3-container w3-deep-purple w3-hover-shadow" >
           <h3>add InnerPolicy</h3>
       </div>
     <form action = "/innAddPolicy" mehtod = 'get'>
-        policyType : <input type ='text' name = 'policyType'/><br>
-        action : <input type = 'action' name ='action'/>
-        <input type = 'submit' value = 'addInnerPolicy' />
+        <div style="margin-left:3%;margin-top:1%;margin-bottom: 1%;">
+            <p>policyType : <input type ='text' name = 'policyType' class="w3-round"/></p>
+            <p>action : <input type = 'action' name ='action' class="w3-round"/></p>
+            <input type = 'submit' value = 'addInnerPolicy' class="w3-round w3-hover-shadow"/><br>
+            <br>
+        </div>
     </form>
     </div>
 
-    <div id ='deleteInnerPolicy' class = 'w3-card-4'>
-      <div class="w3-container w3-indigo" >
+    <div id ='deleteInnerPolicy' class = 'w3-card-4' style="margin-top:1%;display:inline-block;width:30%;margin-left:2%;">
+      <div class="w3-container w3-deep-purple w3-hover-shadow" >
           <h3>delete InnerPolicy</h3>
       </div>
 
     <form action = "/innDeletePolicy" mehtod = 'get'>
-        index : <input type ='text' name = 'index'/><br>
-        <input type = 'submit' value = 'deletInnerPolicy' />
+        <div style="margin-left:3%;margin-top:1%;margin-bottom: 1%;">
+            <br>
+            <p>index : <input type ='text' name = 'index' class="w3-round"/></p>
+            <br>
+        <input type = 'submit' value = 'deletInnerPolicy' class="w3-round w3-hover-shadow" />
+            <br><br>
+        </div>
     </form>
     </div>
 
 
-    <div id ='updateInnerPolicy' class = 'w3-card-4'>
-      <div class="w3-container w3-indigo" >
+    <div id ='updateInnerPolicy' class = 'w3-card-4' style="margin-top:1%;display:inline-block;width:30%;margin-left:2%;">
+      <div class="w3-container w3-deep-purple w3-hover-shadow" >
           <h3>updateInnerPolicy</h3>
       </div>
     <form action = "/updateInnPolicy" mehtod = 'get'>
-        policyType : <select name="policyType">
+        <div style="margin-left:3%;margin-top:1%;margin-bottom: 1%;">
+        <p>policyType : <select name="policyType">
          <option value="1">add_node</option>
          <option value="2">delete_node</option>
          <option value="3">update_outer_policy</option>
-       </select><br>
-         action : <select name="action">
+        </select></p>
+         <p>action : <select name="action">
          <option value="1">allow</option>
          <option value="2">deny</option>
-       </select>
-       <input type = 'submit' value = 'updateInnPolicy' />
+         </select></p>
+            <br>
+       <input type = 'submit' value = 'updateInnPolicy' class="w3-round w3-hover-shadow"/>
+            <br><br>
+        </div>
     </form>
     </div>
 
-    <div id = 'verify' class = 'w3-card-4'>
-      <div class="w3-container w3-indigo" >
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div id = 'verify' class = 'w3-card-4' style="margin-top:1%;margin-left:3%;width:95%;">
+      <div class="w3-container w3-indigo w3-hover-shadow" >
           <h3>verify</h3>
       </div>
       <form action ="/verify" method="get">
-        <input type ='submit' value = 'verify'/>
-      </from>
+          <div style="margin-left:3%;margin-top:1%;margin-bottom: 1%;">
+        <input type ='submit' value = 'verify' class="w3-round w3-hover-shadow"/>
+              <br><br>
+          </div>
+      </form>
     </div>
 
 

@@ -5,13 +5,13 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>
 
+
+
     $(document).ready(function() {
         var lastblockId = $("#lastblockId").val();
         openBlock(lastblockId)
 
-
       });
-
 
 
       function openBlock(blockId) {
@@ -121,7 +121,7 @@
              <h4>
              <div style = "padding-left: 10px">
                    <% for(var txi= 0; txi <blockchain[i].Transactions.length; txi++) {%>
-                       <%= txi %> : <input type ='text' class ='encryptTx' value='<%= blockchain[i].Transactions[txi] %>' readonly="true" size ='80'>
+                       <%= txi %> : <input type ='text' class ='encryptTx' value='<%= blockchain[i].Transactions[txi] %>' readonly="true" size ='80'><br>
                    <% } %>
              </div>
            </h4>
