@@ -46,7 +46,8 @@
          <option value="4">remove</option>
             </select></p>
             <p>trgORop : <input type = 'trgORop' name = 'trgORop' class="w3-round"/></p>
-            <p>action : <input type = 'action' name ='action' class="w3-round"/></p>
+            <p>action :  <select name='action'><option value ="1">allow</option><option vlaue="2">deny</option>
+            </select></p>
         <input type = 'submit' value = 'addPolicy' class="w3-round w3-hover-shadow"/>
             <br><br>
         </div>
@@ -87,7 +88,10 @@
     <form action = "/innAddPolicy" mehtod = 'get'>
         <div style="margin-left:3%;margin-top:1%;margin-bottom: 1%;">
             <p>policyType : <input type ='text' name = 'policyType' class="w3-round"/></p>
-            <p>action : <input type = 'action' name ='action' class="w3-round"/></p>
+            <p>action : <select name="action">
+            <option value="1">allow</option>
+            <option value="2">deny</option>
+            </select></p>
             <input type = 'submit' value = 'addInnerPolicy' class="w3-round w3-hover-shadow"/><br>
             <br>
         </div>
