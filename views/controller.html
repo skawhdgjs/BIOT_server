@@ -38,14 +38,14 @@
 
     <form action = "/outAddPolicy" mehtod = 'get'>
         <div style="margin-left:3%;margin-top:1%;margin-bottom: 1%;">
-            <p>devId : <input type ='text' name = 'devId' class="w3-round"/></p>
+            <p>devId : <input type ='text' name = 'devId' class="w3-round"/> (device Id)</p>
             <p>txType : <select name="txType">
          <option value="1">operation</option>
          <option value="2">access</option>
          <option value="3">monitor</option>
          <option value="4">remove</option>
             </select></p>
-            <p>trgORop : <input type = 'trgORop' name = 'trgORop' class="w3-round"/></p>
+            <p>trgORop : <input type = 'trgORop' name = 'trgORop' class="w3-round"/> (target device or operation number)</p>
             <p>action :  <select name='action'><option value ="1">allow</option><option vlaue="2">deny</option>
             </select></p>
         <input type = 'submit' value = 'addPolicy' class="w3-round w3-hover-shadow"/>
@@ -122,9 +122,9 @@
     <form action = "/updateInnPolicy" mehtod = 'get'>
         <div style="margin-left:3%;margin-top:1%;margin-bottom: 1%;">
         <p>policyType : <select name="policyType">
-         <option value="1">add_node</option>
-         <option value="2">delete_node</option>
-         <option value="3">update_outer_policy</option>
+         <option value="0">add_node</option>
+         <option value="1">remove_node</option>
+         <option value="2">update_outer_policy</option>
         </select></p>
          <p>action : <select name="action">
          <option value="1">allow</option>
@@ -133,7 +133,7 @@
             <br>
        <input type = 'submit' value = 'updateInnPolicy' class="w3-round w3-hover-shadow"/>
             <br><br>
-        </div>
+       </div>
     </form>
     </div>
 

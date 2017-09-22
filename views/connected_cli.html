@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Blockchain admin site</title>
+    <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+
+    </script>
+  </head>
+  <body>
+    <header>
+        <h2 align = "center" >Blockchain admin</h2>
+    </header>
+
+    <div id = 'navigator' class = 'w3-bar w3-green'>
+      <a href="/controller" class="w3-bar-item w3-button w3-right">controller</a>
+      <a href="/connected" class="w3-bar-item w3-button w3-right">connected</a>
+      <a href="/main" class="w3-bar-item w3-button w3-right">main</a>
+    </div>
+
+    <div id ='socket'>
+    <ul>
+      <h3> divice connect </h3>
+
+      <% for( var i  = 0; i<socket_ids.length ; ++i) { %>
+      <li> socket_id  : <%= socket_ids[i] %>   connected ip  : <%= socket_ips[i].split(':')[3]%> </li>
+      <% } %>
+
+    </ul>
+   <footer class = "w3-padding w3-display-bottom w3-center" style = "background: #aaa;color:white;">
+       <br> Copyright &copy; Soongsil Univ.</footer>
+
+  </body>
+</html>

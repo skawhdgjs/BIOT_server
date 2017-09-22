@@ -1,1 +1,3 @@
-const blockserver = require('./lib/BI_blockserver')
+const blockserver = require('./lib/BI_blockServer')
+
+var blkserver = new blockserver()

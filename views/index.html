@@ -63,11 +63,27 @@
              </tr>
              <% for( var outi = 0 ; outi <blockchain[i].outerPolicy.length; outi++) { %>
                 <tr>
-                  <td><%= blockchain[i].outerPolicy[outi].number%></id>
-                  <td><%= blockchain[i].outerPolicy[outi].devId%></id>
-                  <td><%= blockchain[i].outerPolicy[outi].txType%></id>
-                  <td><%= blockchain[i].outerPolicy[outi].trgORop%></id>
-                  <td><%= blockchain[i].outerPolicy[outi].action%></id>
+                  <td><%= blockchain[i].outerPolicy[outi].number%></td>
+                  <td><%= blockchain[i].outerPolicy[outi].devId%></td>
+                  <td>
+                    <% if(blockchain[i].outerPolicy[outi].txType == 1) { %>
+                       operation
+                    <% } else if(blockchain[i].outerPolicy[outi].txType == 2) { %>
+                       access
+                    <% } else if(blockchain[i].outerPolicy[outi].txType == 3) { %>
+                       monitor
+                    <% } else if(blockchain[i].outerPolicy[outi].txType == 4) { %>
+                       remove
+                    <% } %>
+                  </td>
+                  <td><%= blockchain[i].outerPolicy[outi].trgORop%></td>
+                  <td>
+                    <% if(blockchain[i].outerPolicy[outi].action == 1) { %>
+                      ALLOW
+                    <% } else { %>
+                      DENY
+                    <% } %>
+                  </id>
                 </tr>
             <% } %>
          </table>
@@ -88,9 +104,23 @@
 
                <% for( var inni = 0 ; inni <blockchain[i].innerPolicy.length; inni++) { %>
                   <tr>
-                    <td><%= blockchain[i].innerPolicy[inni].number%></id>
-                    <td><%= blockchain[i].innerPolicy[inni].policyType%></id>
-                    <td><%= blockchain[i].innerPolicy[inni].action%></id>
+                    <td><%= blockchain[i].innerPolicy[inni].number%></td>
+                    <td>
+                      <% if (blockchain[i].innerPolicy[inni].policyType == 0) { %>
+                         ADD_NODE
+                      <% }else if(blockchain[i].innerPolicy[inni].policyType == 1) { %>
+                         REMOVE_NODE
+                      <% }else if(blockchain[i].innerPolicy[inni].policyType == 2) { %>
+                         UPDATE_OUTER_POLICY
+                      <% } %>
+                    </td>
+                    <td>
+                      <% if(blockchain[i].innerPolicy[inni].action == 1) { %>
+                         ALLOW
+                      <% } else { %>
+                         DENY
+                      <% } %>
+                    </td>
                   </tr>
               <% } %>
 
