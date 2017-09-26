@@ -49,4 +49,3 @@ Yun Na Hae pqlove0256@gmail.com
 ### License
 
 MIT
->>>>>>> .merge_file_MjHgER
