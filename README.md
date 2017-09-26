@@ -1,2 +1,2 @@
 # BIOT_server
-blockchain for iot securitay -server side
+blockchain for Iot security -server side
