@@ -24,11 +24,15 @@ So, This project aim to make security system fit in IoT Network
 
 - ubuntu
 
+
     apt-get install openvpn
+    
     
 - mac osx
 
+
     brew openvpn
+    
 	
 #### Setting and start openVPN
 
