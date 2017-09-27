@@ -47,7 +47,9 @@ refer wiki : https://github.com/skawhdgjs/BIOT_server/wiki
 ### contributor
 
 Nam Jong Heon skawhdgjs@naver.com
+
 Jong Dong won dongwonism@naver.com
+
 Yun Na Hae pqlove0256@gmail.com
 
 ### License
