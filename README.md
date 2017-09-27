@@ -40,8 +40,18 @@ So, This project aim to make security system fit in IoT Network
 
 https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server-on-ubuntu-16-04
 
+#### Install mongodb
 
-### Installation
+ubuntu
+
+    apt-get install mongodb
+    
+mac osx
+
+    brew install mongodb
+
+### Install this project
+
 
     git clone https://github.com/skawhdgjs/BIOT_server.git
 
