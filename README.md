@@ -17,6 +17,7 @@ So, This project aim to make security system fit in IoT Network
  - Easily update security policy via web page. just add Policy, delete Policy
  - Transaction protection using user's public key
  - All data safely store in blockchain
+ 
 ### Installation
 
     git clone https://github.com/skawhdgjs/BIOT_server.git
@@ -39,6 +40,9 @@ minerId | this server identifier
 ### start
 
 	npm start
+
+### More Info
+refer wiki : https://github.com/skawhdgjs/BIOT_server/wiki
 
 ### contributor
 
