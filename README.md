@@ -20,19 +20,19 @@ So, This project aim to make security system fit in IoT Network
  
 ### Before start 
  
-Install openVPN
+#### Install openVPN
 
-ubuntu
+- ubuntu
 
     apt-get install openvpn
     
-mac osx
+- mac osx
 
     brew openvpn
 	
-Setting and start openVPN
+#### Setting and start openVPN
 
-follow this guide
+- follow this guide
 
 https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server-on-ubuntu-16-04
 
